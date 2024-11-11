@@ -1,0 +1,183 @@
+[
+    {
+      "productId": 1,
+      "productName": "Industrial Widget",
+      "category": "Widgets",
+      "price": 100.00
+    },
+    {
+      "productId": 2,
+      "productName": "Heavy-Duty Machine",
+      "category": "Machinery",
+      "price": 1500.00
+    },
+    {
+      "productId": 3,
+      "productName": "Advanced Robot Arm",
+      "category": "Robotics",
+      "price": 7500.00
+    },
+    {
+      "productId": 4,
+      "productName": "Precision Laser Cutter",
+      "category": "Machinery",
+      "price": 2500.00
+    },
+    {
+      "productId": 5,
+      "productName": "Hydraulic Press",
+      "category": "Machinery",
+      "price": 3000.00
+    },
+    {
+      "productId": 6,
+      "productName": "Conveyor Belt System",
+      "category": "Automation",
+      "price": 4000.00
+    },
+    {
+      "productId": 7,
+      "productName": "Electric Motor",
+      "category": "Electronics",
+      "price": 500.00
+    },
+    {
+      "productId": 8,
+      "productName": "Pneumatic Cylinder",
+      "category": "Automation",
+      "price": 200.00
+    },
+    {
+      "productId": 9,
+      "productName": "Industrial Drill",
+      "category": "Tools",
+      "price": 1200.00
+    },
+    {
+      "productId": 10,
+      "productName": "3D Printer",
+      "category": "Machinery",
+      "price": 1500.00
+    },
+    {
+      "productId": 11,
+      "productName": "CNC Machine",
+      "category": "Machinery",
+      "price": 5000.00
+    },
+    {
+      "productId": 12,
+      "productName": "PLC Controller",
+      "category": "Electronics",
+      "price": 800.00
+    },
+    {
+      "productId": 13,
+      "productName": "Welding Machine",
+      "category": "Tools",
+      "price": 950.00
+    },
+    {
+      "productId": 14,
+      "productName": "Temperature Sensor",
+      "category": "Electronics",
+      "price": 150.00
+    },
+    {
+      "productId": 15,
+      "productName": "Industrial Fan",
+      "category": "Machinery",
+      "price": 400.00
+    },
+    {
+      "productId": 16,
+      "productName": "Solar Panel",
+      "category": "Energy",
+      "price": 1000.00
+    },
+    {
+      "productId": 17,
+      "productName": "Industrial Camera",
+      "category": "Electronics",
+      "price": 800.00
+    },
+    {
+      "productId": 18,
+      "productName": "Stepper Motor",
+      "category": "Electronics",
+      "price": 120.00
+    },
+    {
+      "productId": 19,
+      "productName": "Vacuum Pump",
+      "category": "Machinery",
+      "price": 500.00
+    },
+    {
+      "productId": 20,
+      "productName": "Pressure Gauge",
+      "category": "Instruments",
+      "price": 50.00
+    },
+    {
+      "productId": 21,
+      "productName": "Industrial Scale",
+      "category": "Instruments",
+      "price": 600.00
+    },
+    {
+      "productId": 22,
+      "productName": "Circuit Breaker",
+      "category": "Electronics",
+      "price": 100.00
+    },
+    {
+      "productId": 23,
+      "productName": "Servo Motor",
+      "category": "Electronics",
+      "price": 250.00
+    },
+    {
+      "productId": 24,
+      "productName": "Heat Exchanger",
+      "category": "Machinery",
+      "price": 1200.00
+    },
+    {
+      "productId": 25,
+      "productName": "Air Compressor",
+      "category": "Machinery",
+      "price": 900.00
+    },
+    {
+      "productId": 26,
+      "productName": "Industrial Valve",
+      "category": "Components",
+      "price": 350.00
+    },
+    {
+      "productId": 27,
+      "productName": "Magnetic Sensor",
+      "category": "Electronics",
+      "price": 75.00
+    },
+    {
+      "productId": 28,
+      "productName": "Industrial Pump",
+      "category": "Machinery",
+      "price": 1100.00
+    },
+    {
+      "productId": 29,
+      "productName": "Electric Actuator",
+      "category": "Electronics",
+      "price": 200.00
+    },
+    {
+      "productId": 30,
+      "productName": "High-Power LED",
+      "category": "Electronics",
+      "price": 50.00
+    }
+  ]
+  
