@@ -2,16 +2,36 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beställning av Industriprodukter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Beställ industriprodukter</h1>
-    <form id="orderForm">
-        <label for="productSelect">Välj produkt:</label>
-        <select id="productSelect" name="productSelect"></select>
-        <button type="submit">Skicka Beställning</button>
-    </form>
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+    </select>
+    
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price (kr)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Product rows will be added here dynamically -->
+        </tbody>
+    </table>
 
+    <div id="orderSummary">
+        <p>Total Selected: <span id="totalCount">0</span> items</p>
+        <p>Total Price: <span id="totalPrice">0.00</span> kr</p>
+        <button id="placeOrder">Place Order</button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

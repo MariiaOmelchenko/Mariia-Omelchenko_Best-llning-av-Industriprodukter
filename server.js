@@ -5,42 +5,56 @@ const { v4: uuidv4 } = require('uuid');
 const app = express();
 app.use(express.json());
 
-// Konfigurera databasanslutning
+// Configure MySQL database connection
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'root', 
-    password: '1234', 
+    user: 'root',
+    password: '1234',
     database: 'orders_db'
 });
 
-// Anslut till databasen
 db.connect(err => {
     if (err) {
-        console.error("Fel vid anslutning till databasen:", err);
+        console.error("Database connection error:", err);
     } else {
-        console.log("Ansluten till databasen.");
+        console.log("Connected to database.");
     }
 });
 
-// Skapa en endpoint för att hantera beställningar
-app.post('/api/orders', (req, res) => {
-    const orderId = uuidv4(); // Skapa ett unikt ID för beställningen
-    const productId = req.body.productId;
-    const lineNumber = Math.floor(Math.random() * 1000); // Exempel på radnummer
+// Endpoint to handle orders
+app.post('/api/order', (req, res) => {
+    const orderId = uuidv4();
+    const products = req.body.products;
 
-    // Spara beställningen i databasen
-    const query = `INSERT INTO orders (order_id, product_id, line_number) VALUES (?, ?, ?)`;
-    db.query(query, [orderId, productId, lineNumber], (err, result) => {
+    // Calculate total price for the order
+    const totalPrice = products.reduce((sum, product) => sum + product.price, 0);
+
+    // Insert order into 'orders' table
+    const orderQuery = 'INSERT INTO orders (order_id, total_price) VALUES (?, ?)';
+    db.query(orderQuery, [orderId, totalPrice], (err, result) => {
         if (err) {
-            console.error("Fel vid insättning av beställning:", err);
-            res.status(500).send("Fel vid sparande av beställning.");
-        } else {
-            res.status(201).json({ message: "Beställning skapad", orderId });
+            console.error("Error inserting order:", err);
+            res.status(500).json({ message: "Error saving order" });
+            return;
         }
+
+        // Insert each item into 'order_items' table
+        const orderItemsQuery = 'INSERT INTO order_items (order_id, product_id, price) VALUES ?';
+        const orderItemsValues = products.map(product => [orderId, product.id, product.price]);
+
+        db.query(orderItemsQuery, [orderItemsValues], (err, result) => {
+            if (err) {
+                console.error("Error inserting order items:", err);
+                res.status(500).json({ message: "Error saving order items" });
+                return;
+            }
+
+            res.status(201).json({ message: "Order created successfully", orderId });
+        });
     });
 });
 
-// Starta servern
+// Start server
 app.listen(3007, () => {
-    console.log("Server körs på http://localhost:3007");
+    console.log("Server running at http://localhost:3007");
 });

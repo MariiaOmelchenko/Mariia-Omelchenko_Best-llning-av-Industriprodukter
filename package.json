@@ -1,0 +1,26 @@
+{
+  "name": "mariia-omelchenko_best-llning-av-industriprodukter",
+  "version": "1.0.0",
+  "description": "Bygga en websida som använder Forms för att skicka en beställning på industriprodukter.\r Produkterna ska kunna väljas från industrial.json i Serverside-repot som delats.\r Formuläret ska skickas till ett eget REST-API via ett POST-anrop.\r Servern ska spara varje beställning i en tabell med produktens id, ett unikt radnummer och ett id gemensamt för beställningen, detta ska sparas på en en databas.",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariiaOmelchenko/Mariia-Omelchenko_Best-llning-av-Industriprodukter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariiaOmelchenko/Mariia-Omelchenko_Best-llning-av-Industriprodukter/issues"
+  },
+  "homepage": "https://github.com/MariiaOmelchenko/Mariia-Omelchenko_Best-llning-av-Industriprodukter#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mysql2": "^3.11.4",
+    "uuid": "^11.0.3"
+  }
+}
