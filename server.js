@@ -5,6 +5,9 @@ const { v4: uuidv4 } = require('uuid');
 const app = express();
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors());
+
 // Configure MySQL database connection
 const db = mysql.createConnection({
     host: 'localhost',

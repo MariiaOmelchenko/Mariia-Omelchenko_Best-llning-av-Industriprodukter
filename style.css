@@ -1,24 +1,113 @@
 
 
-/* Table styling to reduce spacing */
+/* Reset basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    color: #4ca25b;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Filter section */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#categoryFilter {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+/* Table styling */
 #productTable {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.95em;
 }
 
 #productTable th, #productTable td {
-    padding: 8px;
+    padding: 12px;
     text-align: left;
+    border-bottom: 1px solid #e1e1e1;
 }
 
 #productTable th {
-    background-color: #f4f4f4;
+    background-color: #4ca25b;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-#productTable td {
-    border-bottom: 1px solid #ddd;
+#productTable tr:hover {
+    background-color: #f0f5f4;
 }
 
 .productCheckbox {
-    width: 20px; /* To keep checkboxes small */
+    width: 20px;
+    height: 20px;
+}
+
+/* Order Summary */
+#orderSummary {
+    text-align: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-top: 2px solid #e1e1e1;
+    border-radius: 8px;
+}
+
+#orderSummary p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+#placeOrder {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4ca25b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#placeOrder:hover {
+    background-color: #76fb90;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #bbe5dc;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
 }

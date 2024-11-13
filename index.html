@@ -7,31 +7,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Beställ industriprodukter</h1>
-    <label for="categoryFilter">Filter by Category:</label>
-    <select id="categoryFilter">
-        <option value="all">All Categories</option>
-    </select>
-    
-    <table id="productTable">
-        <thead>
-            <tr>
-                <th>Product Name</th>
-                <th>Category</th>
-                <th>Price (kr)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Product rows will be added here dynamically -->
-        </tbody>
-    </table>
+    <div class="container">
+        <h1>Beställ industriprodukter</h1>
+        <div class="filter-section">
+            <label for="categoryFilter">Filter by Category:</label>
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+            </select>
+        </div>
+        
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Price (kr)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Product rows will be added here dynamically -->
+            </tbody>
+        </table>
 
-    <div id="orderSummary">
-        <p>Total Selected: <span id="totalCount">0</span> items</p>
-        <p>Total Price: <span id="totalPrice">0.00</span> kr</p>
-        <button id="placeOrder">Place Order</button>
+        <div id="orderSummary">
+            <p>Total Selected: <span id="totalCount">0</span> items</p>
+            <p>Total Price: <span id="totalPrice">0.00</span> kr</p>
+            <button id="placeOrder">Place Order</button>
+        </div>
     </div>
     
+    <footer>
+        <p>&copy; 2024 Mariia Omelchenko. Alla rättigheter förbehållna.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

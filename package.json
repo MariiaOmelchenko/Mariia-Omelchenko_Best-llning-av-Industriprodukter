@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/MariiaOmelchenko/Mariia-Omelchenko_Best-llning-av-Industriprodukter#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.1",
     "mysql2": "^3.11.4",
     "uuid": "^11.0.3"

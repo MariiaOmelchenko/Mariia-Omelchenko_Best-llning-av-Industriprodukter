@@ -68,26 +68,37 @@ fetch('industrial.json')
             }
         });
 
+        // Function to clear selected checkboxes
+        function clearSelections() {
+            const checkboxes = document.querySelectorAll('.productCheckbox');
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+            selectedProducts = [];
+            totalCountElem.textContent = '0';
+            totalPriceElem.textContent = '0.00';
+        }
+
         // Send order to server
         placeOrderButton.addEventListener('click', () => {
             if (selectedProducts.length === 0) {
                 alert("Please select at least one product.");
                 return;
             }
-
+        
             fetch('http://localhost:3007/api/order', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ products: selectedProducts })
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) throw new Error("Network response was not ok");
+                return response.json();
+            })
             .then(data => {
                 alert("Order placed successfully!");
-                selectedProducts = []; // Reset selection
-                totalCountElem.textContent = '0';
-                totalPriceElem.textContent = '0.00';
+                clearSelections(); // Clear selections after successful order
             })
             .catch(error => console.error("Error placing order:", error));
         });
     })
     .catch(error => console.error("Error loading products:", error));
+
