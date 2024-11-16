@@ -5,6 +5,7 @@ Formuläret ska skickas till ett eget REST-API via ett POST-anrop.
 Servern ska spara varje beställning i en tabell med produktens id, ett unikt radnummer och ett id gemensamt för beställningen, detta ska sparas på en en databas.
 
 import db mysql -u root -p my_database_name < db/my_database_name.sql
+pasworg to DB: 1234
 
 mkdir my-server
 cd my-server
